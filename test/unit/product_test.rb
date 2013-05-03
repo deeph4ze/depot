@@ -51,8 +51,7 @@ class ProductTest < ActiveSupport::TestCase
   	end
 
   	bad.each do |name|
-      puts new_product(name).valid?
-  		assert new_product(name).valid?, "#{name} shouldn't be valid"
+  		assert new_product(name).invalid?, "#{name} shouldn't be valid"
   	end
 
   end
